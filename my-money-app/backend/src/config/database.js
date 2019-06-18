@@ -3,7 +3,8 @@ mongoose.Promise = global.Promise
 
 const url = 'mongodb://localhost/mymoney'
 
-module.exports = mongoose.connect(url, {useNewUrlParser: true})
+const con = mongoose.connect(url, { useMongoClient: true })
+con.openUri(url);
 
 mongoose.Error.messages.general.required = 'O atributo {PATH} é obrigatório.'
 mongoose.Error.messages.Number.min = 'O {VALUE} informado é maior que o limite mínimo de {MIN}.'
