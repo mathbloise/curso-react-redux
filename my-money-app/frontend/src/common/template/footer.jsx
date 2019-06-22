@@ -7,4 +7,4 @@ export default props => (
         </strong>
         <a href="https://github.com/mathbloise" target='_blank'> mathbloise</a>.
     </footer>
-) 
+)
